@@ -1,0 +1,700 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "header header"
+    "aside content";
+}
+.header {
+  /* border: 1px solid black; */
+  background-color: white;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 20% 50% 20% 10%;
+  align-items: center;
+  border-bottom: 1px solid #0202031f;
+}
+
+.content {
+  
+  height: 100vh;
+  grid-area: content;
+  padding: 2rem;
+  background-color: #e5e5e5;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #2c384f;
+}
+.logoBlock > img {
+  padding-right: 12px;
+}
+.serachBlock > img {
+  display: flex;
+  padding-left: 60px;
+}
+.portfolio {
+  height: 250px;
+  grid-area: portfolio;
+  display: grid;
+  background-color: white;
+  padding: 2rem;
+  grid-gap: 10px;
+  border-radius: 10px;
+  grid-template-columns: 10% 1fr;
+  grid-template-areas:
+    "headerPortfolio headerPortfolio"
+    "headerPrice headerGraph";
+}
+.headerPortfolio {
+  grid-area: headerPortfolio;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerPortfolioLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerPortfolioLeft div:first-child {
+  background: #724bf2;
+  border-radius: 6px;
+  padding: 10px;
+  
+}
+.headerPortfolioLeft h1 {
+  margin: 0;
+}
+.headerPrice {
+  grid-area: headerPrice;
+}
+.headerGraph {
+  grid-area: headerGraph;
+
+}
+.headerPrice {
+  grid-area: headerPrice;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.headerPrice > div {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #899bbe;
+  position: relative;
+}
+.headerPrice div::after {
+  position: absolute;
+  bottom: 3px;
+  content: "............................................................................";
+  letter-spacing: 5px;
+}
+.headerGraph {
+  grid-area: headerGraph;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.headerGraph > div {
+  width: 36px;
+  background-color: #724bf2;
+  border-radius: 4px 4px 0px 0px;
+  position: relative;
+}
+.headerGraph div::after {
+  position: absolute;
+  bottom: -24px;
+  left: 6px;
+  color: #899bbe;
+}
+.jan {
+  height: 43px;
+  
+}
+.jan:after {
+  content: "jan";
+}
+.feb {
+  height: 77px;
+  
+}
+.feb::after {
+  content: "feb";
+}
+.mar {
+  height: 129px;
+}
+.mar::after {
+  content: "mar";
+}
+.apr {
+  height: 86px;
+}
+.apr::after {
+  content: "apr";
+}
+.may {
+  height: 43px;
+}
+.may::after {
+  content: "may";
+}
+.jun {
+  height: 64px;
+}
+.jun::after {
+  content: "jun";
+}
+.jul {
+  height: 86px;
+}
+.jul::after {
+  content: "jul";
+}
+.aug {
+  height: 113px;
+}
+.aug::after {
+  content: "aug";
+}
+.sep {
+  height: 104px;
+}
+.sep::after {
+  content: "sep";
+}
+.oct {
+  height: 57px;
+}
+.oct::after {
+  content: "oct";
+}
+.header input {
+  /* background-image:url(./img/search-normal.png); */
+  border: 1px solid #f5f7fa;
+  border-radius: 10px;
+  margin-left: 60px;
+
+  width: 240px;
+  height: 25px;
+  left: 320px;
+  top: 20px;
+
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+.userBlock {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding-left: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #2c384f;
+}
+.titleBlock h1 {
+  margin: 0;
+}
+.face {
+  display: flex;
+}
+.titleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleBlock button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #724bf2;
+  border-radius: 12px;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+}
+.contentContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh;
+  gap: 20px;
+  grid-template-areas:
+    "worth worth worth worth worth worth income income income expenses expenses expenses "
+    "portfolio portfolio portfolio portfolio portfolio portfolio portfolio portfolio assets assets assets assets"
+    "Transactions Transactions Transactions Transactions Transactions Transactions Transactions Transactions assets assets assets assets ";
+}
+
+.worth {
+  width: 580px;
+  grid-area: worth;
+  display: flex;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.Transactions {
+  grid-area: Transactions;
+}
+.worthLeftVlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.worthLeftVlock p,
+h1 {
+  margin: 0;
+}
+.worthLeftVlock {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.s2 {
+  border-color: white;
+  width: 80px;
+  height: 40px;
+  background-color: #724bf2;
+  border-radius: 10px;
+  padding: 6px 10px 5px 15px;
+}
+.b2 {
+  border-color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ece6ff;
+  padding: 6px 10px 5px 15px;
+}
+
+.worthLeftVlock p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #899bbe;
+}
+.assets {
+  grid-area: assets;
+  background-color: #ffffffff;
+  border-radius: 8px;
+  padding: 26px 30px;
+}
+.exchange {
+  border-bottom: 1px dashed #2c384f4d;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+}
+.assetsHeader {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.assets h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2c384f;
+}
+.leftContent {
+  padding-top: 20px;
+  display: flex;
+  gap: 14px;
+}
+.leftContent h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #2c384f;
+  margin: 0;
+}
+.leftContent p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: #899bbe;
+  margin: 0;
+}
+.leftContent > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.group12 {
+  padding-top: 12%;
+  padding-left: 40%;
+  display: flex;
+  width: 210px;
+  height: 92px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.rightContent > div {
+  display: flex;
+  flex-direction: column;
+  align-items: end  ;
+  
+ 
+}
+.as {
+  display: flex;
+  
+  
+}
+.rightContent p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2c384f;
+  margin: 0;
+}
+.rightContent > div p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #20bf6b;
+}
+.income {
+  height: 170px;
+  width: 275px;
+  padding: 2rem;
+  grid-area: income;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.income h1 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+
+  color: #2c384f;
+}
+.pp {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #899bbe;
+}
+.gg {
+  padding-left: 50%;
+}
+.pshka {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #20bf6b;
+}
+.pshkadown {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #eb3b5a;
+}
+.expenses {
+  padding: 2rem;
+  width: 275px;
+  grid-area: expenses;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.expenses h1 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+
+  color: #2c384f;
+}
+.ff {
+  display: flex;
+  padding-left: 110%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #20bf6b;
+}
+.buttons {
+  display: flex;
+  padding-top: 25px;
+}
+
+.Transactions {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.transactionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ggg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menuBoard {
+  background-color: #724bf2;
+  border-radius: 6px;
+  padding: 10px;
+}
+.month {
+  display: flex;
+  justify-content: flex-end;
+}
+.tUsers {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 40px;
+  padding-bottom: 17px;
+  border-bottom: 1px dashed #2c384f4d;
+}
+.tAvatar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.tName {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.tBalance {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+.tDate {
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
+.tEdit {
+  grid-column-start: 11;
+  grid-column-end: 12;
+}
+.tDelete {
+  grid-column-start: 11;
+  grid-column-end: 12;
+  padding-left: 60px;
+}
+.tEdit {
+  margin-right: 15px;
+}
+.tUsers2 {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 100px;
+}
+.tAvatar2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.tName2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.tBalance2 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+.tDate2 {
+  grid-column-start: 8;
+  grid-column-end: 11;
+}
+.tEdit2 {
+  grid-column-start: 11;
+  grid-column-end: 12;
+}
+.view button {
+  background-color: #724bf2;
+  display: flex;
+  color: white;
+  width: 250px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-color: white;
+}
+.view {
+  padding-top: 40px;
+}
+.aEthereum {
+  display: flex;
+  border: 1px solid white;
+  background-color: #784ffe;
+  color: white;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 65px;
+}
+.aEthereum {
+  display: flex;
+  justify-content: space-around;
+}
+
+.back {
+  padding-top: 10px;
+}
+.dashBoard {
+  color: #784FFE;
+  display: flex;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color  :#784FFE1F;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 54px;
+  width: 220px;
+
+}
+.dashCont {
+  padding-top: 10px;
+}
+.ex {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.ex h3 {
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.send {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.send h3 {
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.chart  {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.chart h3 {
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.note {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.note h3 {
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.stick {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.stick h3 {
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.setting {
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.setting h3{
+  color: #2C384F;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+.logOut {
+  padding-top: 320px;
+  padding-left:15px ;
+  display: flex;
+  gap: 10px;
+  display: flex;
+}
+.logOut h3 {
+  color: #EB3B5A;
+font-size: 16px;
+font-family: Inter;
+font-weight: 500;
+}
+.aContainer {
+  display: flex;
+  flex-direction: column;
+  
+}
+.aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.buttons {
+  display: flex;
+}
+.s2 img {
+ width: 16px;
+ height: 15px;
+}
